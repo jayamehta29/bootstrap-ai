@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Themes - Bootstrap AI">
+  <div>
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Themes</h1>
+    
+    <div class="mb-8">
+      <p class="text-lg text-gray-600 mb-6">
+        Bootstrap AI comes with three built-in themes: Light, Dark, and High Contrast.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Light Theme</h3>
+          <p class="text-gray-600 mb-4">Default light theme with clean, modern styling.</p>
+          <button 
+            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            onclick="document.documentElement.setAttribute('data-theme', 'light')"
+          >
+            Apply Light Theme
+          </button>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Dark Theme</h3>
+          <p class="text-gray-600 mb-4">Dark theme for low-light environments.</p>
+          <button 
+            class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900"
+            onclick="document.documentElement.setAttribute('data-theme', 'dark')"
+          >
+            Apply Dark Theme
+          </button>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">High Contrast</h3>
+          <p class="text-gray-600 mb-4">High contrast theme for accessibility.</p>
+          <button 
+            class="px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800"
+            onclick="document.documentElement.setAttribute('data-theme', 'high-contrast')"
+          >
+            Apply High Contrast
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border border-gray-200 rounded-lg p-6">
+      <h2 class="text-xl font-semibold text-gray-900 mb-4">Theme Preview</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <fk-button variant="solid">Solid</fk-button>
+        <fk-button variant="soft">Soft</fk-button>
+        <fk-button variant="ghost">Ghost</fk-button>
+        <fk-button variant="link">Link</fk-button>
+      </div>
+      
+      <div class="mt-4 space-x-2">
+        <fk-badge variant="primary">Primary</fk-badge>
+        <fk-badge variant="success">Success</fk-badge>
+        <fk-badge variant="warning">Warning</fk-badge>
+        <fk-badge variant="error">Error</fk-badge>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  // Components and themes will be imported when built
+  console.log('Themes page loaded');
+</script>

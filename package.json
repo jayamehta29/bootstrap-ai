@@ -1,0 +1,57 @@
+{
+  "name": "bootstrap-ai",
+  "version": "0.1.0",
+  "description": "A lightweight, accessible, design-token–driven UI component library using Web Components (Lit)",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "test:a11y": "echo \"Accessibility tests not yet implemented\"",
+    "test:visual": "echo \"Visual regression tests not yet implemented\"",
+    "test:browser": "echo \"Cross-browser tests not yet implemented\"",
+    "check-bundle-sizes": "echo \"Bundle size checks not yet implemented\"",
+    "lint": "npm run lint --workspaces",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "npm run type-check --workspaces",
+    "clean": "npm run clean --workspaces",
+    "dev": "npm run dev --workspace=@bootstrap-ai/docs",
+    "release": "changeset publish",
+    "version": "changeset version",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/bootstrap-ai.git"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "design-system",
+    "ui-library",
+    "accessibility",
+    "design-tokens"
+  ],
+  "author": "Your Organization",
+  "license": "MIT"
+}

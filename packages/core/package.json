@@ -1,0 +1,55 @@
+{
+  "name": "@bootstrap-ai/core",
+  "version": "0.1.0",
+  "description": "Core design tokens, utilities, and reset styles for Bootstrap AI",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./tokens": {
+      "import": "./dist/tokens/index.js",
+      "types": "./dist/tokens/index.d.ts"
+    },
+    "./reset": {
+      "import": "./dist/reset/index.js",
+      "types": "./dist/reset/index.d.ts"
+    },
+    "./utilities": {
+      "import": "./dist/utilities/index.js",
+      "types": "./dist/utilities/index.d.ts"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc && npm run build:css",
+    "build:css": "node scripts/build-css.js",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "design-tokens",
+    "css",
+    "utilities",
+    "reset"
+  ],
+  "author": "Your Organization",
+  "license": "MIT"
+}

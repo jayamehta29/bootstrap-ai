@@ -1,0 +1,62 @@
+{
+  "name": "@bootstrap-ai/components",
+  "version": "0.1.0",
+  "description": "Web Components for Bootstrap AI",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./button": {
+      "import": "./dist/button/index.js",
+      "types": "./dist/button/index.d.ts"
+    },
+    "./icon": {
+      "import": "./dist/icon/index.js",
+      "types": "./dist/icon/index.d.ts"
+    },
+    "./badge": {
+      "import": "./dist/badge/index.js",
+      "types": "./dist/badge/index.d.ts"
+    },
+    "./spinner": {
+      "import": "./dist/spinner/index.js",
+      "types": "./dist/spinner/index.d.ts"
+    },
+    "./tooltip": {
+      "import": "./dist/tooltip/index.js",
+      "types": "./dist/tooltip/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "@bootstrap-ai/core": "*",
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "ui-components",
+    "accessibility"
+  ],
+  "author": "Your Organization",
+  "license": "MIT"
+}

@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Components - Bootstrap AI">
+  <div>
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Components</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Button</h3>
+        <p class="text-gray-600 mb-4">Primary action trigger with variants and sizes.</p>
+        <div class="space-y-2">
+          <fk-button variant="solid">Solid Button</fk-button>
+          <fk-button variant="soft">Soft Button</fk-button>
+          <fk-button variant="ghost">Ghost Button</fk-button>
+        </div>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Badge</h3>
+        <p class="text-gray-600 mb-4">Status indicators and labels.</p>
+        <div class="space-x-2">
+          <fk-badge variant="primary">Primary</fk-badge>
+          <fk-badge variant="success">Success</fk-badge>
+          <fk-badge variant="warning">Warning</fk-badge>
+          <fk-badge variant="error">Error</fk-badge>
+        </div>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Spinner</h3>
+        <p class="text-gray-600 mb-4">Loading indicators with multiple variants.</p>
+        <div class="space-x-4">
+          <fk-spinner variant="spinner" size="sm"></fk-spinner>
+          <fk-spinner variant="dots" size="md"></fk-spinner>
+          <fk-spinner variant="pulse" size="lg"></fk-spinner>
+        </div>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Icon</h3>
+        <p class="text-gray-600 mb-4">SVG icons with customizable size and color.</p>
+        <div class="space-x-4">
+          <fk-icon size="1.5em" color="blue">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </fk-icon>
+          <fk-icon size="1.5em" color="green">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </fk-icon>
+        </div>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Tooltip</h3>
+        <p class="text-gray-600 mb-4">Contextual information on hover or focus.</p>
+        <fk-tooltip position="top">
+          <fk-button slot="trigger">Hover me</fk-button>
+          This is a tooltip
+        </fk-tooltip>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  // Components will be imported when built
+  console.log('Components page loaded');
+</script>

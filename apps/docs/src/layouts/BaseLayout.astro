@@ -1,0 +1,70 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'A lightweight, accessible, design-token–driven UI component library using Web Components (Lit)' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Import Bootstrap AI styles -->
+    <style>
+      /* Basic styles for demo */
+      :root {
+        --color-primary-500: #0ea5e9;
+        --color-neutral-100: #f5f5f5;
+        --color-neutral-800: #262626;
+        --spacing-2: 0.5rem;
+        --spacing-3: 0.75rem;
+        --spacing-4: 1rem;
+        --radius-md: 0.375rem;
+        --typography-fontSize-base: 1rem;
+        --typography-fontWeight-medium: 500;
+      }
+    </style>
+    
+    <!-- Tailwind CSS -->
+    <script>
+      import 'tailwindcss/tailwind.css';
+    </script>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900">
+    <header class="border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <h1 class="text-xl font-bold text-gray-900">Bootstrap AI</h1>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="/" class="text-gray-500 hover:text-gray-900">Home</a>
+            <a href="/components" class="text-gray-500 hover:text-gray-900">Components</a>
+            <a href="/themes" class="text-gray-500 hover:text-gray-900">Themes</a>
+            <a href="/guides" class="text-gray-500 hover:text-gray-900">Guides</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <slot />
+    </main>
+    
+    <footer class="border-t border-gray-200 mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="text-center text-gray-500">
+          <p>&copy; 2024 Bootstrap AI. Built with Astro and Web Components.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

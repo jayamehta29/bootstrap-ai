@@ -1,0 +1,56 @@
+{
+  "name": "@bootstrap-ai/themes",
+  "version": "0.1.0",
+  "description": "Curated themes for Bootstrap AI (Light, Dark, High-Contrast)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./light": {
+      "import": "./dist/light/index.js",
+      "types": "./dist/light/index.d.ts"
+    },
+    "./dark": {
+      "import": "./dist/dark/index.js",
+      "types": "./dist/dark/index.d.ts"
+    },
+    "./high-contrast": {
+      "import": "./dist/high-contrast/index.js",
+      "types": "./dist/high-contrast/index.d.ts"
+    },
+    "./light.css": "./dist/light.css",
+    "./dark.css": "./dist/dark.css",
+    "./high-contrast.css": "./dist/high-contrast.css"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc && npm run build:css",
+    "build:css": "node scripts/build-css.js",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "@bootstrap-ai/core": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "themes",
+    "css",
+    "design-tokens"
+  ],
+  "author": "Your Organization",
+  "license": "MIT"
+}
