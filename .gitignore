@@ -1,52 +1,86 @@
-# Dependencies
+# ============================================================
+# 👩‍💻  Bootstrap-AI Component Library (.gitignore)
+# ------------------------------------------------------------
+# Purpose: Ignore unnecessary files while allowing built
+# packages (core/components) to be hosted via GitHub Pages.
+# ============================================================
+
+
+# ──────────────────────────────
+# Node dependencies
+# ──────────────────────────────
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+package-lock.json
 
+
+# ──────────────────────────────
 # Build outputs
+# ──────────────────────────────
 dist/
-build/
-out/
-*.tsbuildinfo
+# ✅ Keep only these for GitHub Pages hosting
+!packages/core/dist/
+!packages/components/dist/
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-# IDE
-.vscode/
-.idea/
+# ──────────────────────────────
+# Temporary and cache files
+# ──────────────────────────────
+*.tmp
+*.temp
+*.bak
 *.swp
 *.swo
-*~
+*.log
+*.map
+.cache/
+.temp/
+tmp/
+logs/
 
-# OS
+
+# ──────────────────────────────
+# IDE and OS files
+# ──────────────────────────────
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Logs
-logs/
-*.log
 
-# Coverage
+# ──────────────────────────────
+# Environment and credentials
+# ──────────────────────────────
+.env
+.env.local
+.env.development
+.env.production
+
+
+# ──────────────────────────────
+# Test and coverage output
+# ──────────────────────────────
 coverage/
+test-results/
 .nyc_output/
+playwright-report/
+jest-stare/
+cypress/videos/
+cypress/screenshots/
 
-# Temporary files
-.tmp/
-.temp/
 
-# Package manager
-.pnpm-store/
-.yarn/cache/
-.yarn/unplugged/
-.yarn/build-state.yml
-.yarn/install-state.gz
+# ──────────────────────────────
+# TypeScript / Build artifacts
+# ──────────────────────────────
+*.tsbuildinfo
+tsconfig.tsbuildinfo
 
-# Changeset
-.changeset/
+
+# ──────────────────────────────
+# Editor / Misc
+# ──────────────────────────────
+*.co*
