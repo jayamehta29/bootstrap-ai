@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap AI Example</title>
+
+    <!-- Import Bootstrap AI styles -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@bootstrap-ai/ui/dist/styles.css"
+    />
+
+    <!-- Import Map for module resolution -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@bootstrap-ai/ui": "./node_modules/@bootstrap-ai/ui/dist/index.js",
+          "lit": "./node_modules/lit/index.js",
+          "lit/": "./node_modules/lit/"
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background-color: #f8fafc;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #1f2937;
+        margin-bottom: 1rem;
+      }
+
+      .component-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bootstrap AI Components Demo</h1>
+      <p>
+        This is a simple example showing how to use Bootstrap AI components.
+      </p>
+
+      <div class="section">
+        <h2>Buttons</h2>
+        <div class="component-grid">
+          <fk-button variant="solid">Solid Button</fk-button>
+          <fk-button variant="soft">Soft Button</fk-button>
+          <fk-button variant="ghost">Ghost Button</fk-button>
+          <fk-button variant="link">Link Button</fk-button>
+        </div>
+
+        <h3>Sizes</h3>
+        <div class="component-grid">
+          <fk-button size="sm">Small</fk-button>
+          <fk-button size="md">Medium</fk-button>
+          <fk-button size="lg">Large</fk-button>
+        </div>
+
+        <h3>With Icons</h3>
+        <div class="component-grid">
+          <fk-button>
+            <fk-icon name="check" slot="leading-icon"></fk-icon>
+            Save
+          </fk-button>
+          <fk-button variant="soft">
+            <fk-icon name="close" slot="trailing-icon"></fk-icon>
+            Cancel
+          </fk-button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Badges</h2>
+        <div class="component-grid">
+          <fk-badge variant="primary">Primary</fk-badge>
+          <fk-badge variant="success">Success</fk-badge>
+          <fk-badge variant="warning">Warning</fk-badge>
+          <fk-badge variant="error">Error</fk-badge>
+          <fk-badge variant="neutral">Neutral</fk-badge>
+        </div>
+
+        <h3>Dot Badges</h3>
+        <div class="component-grid">
+          <fk-badge variant="success" dot></fk-badge>
+          <fk-badge variant="warning" dot></fk-badge>
+          <fk-badge variant="error" dot></fk-badge>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Spinners</h2>
+        <div class="component-grid">
+          <fk-spinner variant="spinner"></fk-spinner>
+          <fk-spinner variant="dots"></fk-spinner>
+          <fk-spinner variant="pulse"></fk-spinner>
+        </div>
+
+        <h3>Sizes</h3>
+        <div class="component-grid">
+          <fk-spinner size="sm"></fk-spinner>
+          <fk-spinner size="md"></fk-spinner>
+          <fk-spinner size="lg"></fk-spinner>
+          <fk-spinner size="xl"></fk-spinner>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Tooltips</h2>
+        <div class="component-grid">
+          <fk-tooltip position="top">
+            <fk-button slot="trigger">Top Tooltip</fk-button>
+            This is a top tooltip
+          </fk-tooltip>
+
+          <fk-tooltip position="bottom">
+            <fk-button slot="trigger">Bottom Tooltip</fk-button>
+            This is a bottom tooltip
+          </fk-tooltip>
+
+          <fk-tooltip position="left">
+            <fk-button slot="trigger">Left Tooltip</fk-button>
+            This is a left tooltip
+          </fk-tooltip>
+
+          <fk-tooltip position="right">
+            <fk-button slot="trigger">Right Tooltip</fk-button>
+            This is a right tooltip
+          </fk-tooltip>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Icons</h2>
+        <div class="component-grid">
+          <fk-icon name="check" size="24px" color="#22c55e"></fk-icon>
+          <fk-icon name="close" size="24px" color="#ef4444"></fk-icon>
+          <fk-icon name="arrow-right" size="24px" color="#0ea5e9"></fk-icon>
+        </div>
+      </div>
+    </div>
+
+    <!-- Import Bootstrap AI components -->
+    <script type="module">
+      import '@bootstrap-ai/ui';
+
+      // Add some interactivity
+      document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('fk-button');
+        buttons.forEach(button => {
+          button.addEventListener('fk-click', e => {
+            console.log('Button clicked:', e.target.textContent);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

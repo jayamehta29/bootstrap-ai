@@ -1,0 +1,14 @@
+{
+  "name": "bootstrap-ai-example",
+  "version": "1.0.0",
+  "description": "Example usage of Bootstrap AI components",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "serve": "npx serve ."
+  },
+  "dependencies": {
+    "@bootstrap-ai/ui": "file:../packages/ui",
+    "lit": "^3.1.0"
+  }
+}

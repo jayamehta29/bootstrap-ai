@@ -18,15 +18,24 @@ A lightweight, accessible, design-token–driven UI component library using Web 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bootstrap-ai/core@latest/dist/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bootstrap-ai/themes@latest/dist/light.css">
-</head>
-<body>
-  <fk-button variant="solid">Click me</fk-button>
-  
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@bootstrap-ai/components@latest/dist/button/index.js"></script>
-</body>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@bootstrap-ai/core@latest/dist/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@bootstrap-ai/themes@latest/dist/light.css"
+    />
+  </head>
+  <body>
+    <fk-button variant="solid">Click me</fk-button>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@bootstrap-ai/components@latest/dist/button/index.js"
+    ></script>
+  </body>
 </html>
 ```
 
@@ -42,7 +51,7 @@ import '@bootstrap-ai/themes/dist/light.css';
 import '@bootstrap-ai/components/button';
 
 // Use in your HTML
-<fk-button variant="solid">Click me</fk-button>
+<fk-button variant="solid">Click me</fk-button>;
 ```
 
 ## Packages
@@ -125,9 +134,7 @@ function App() {
 
 ```vue
 <template>
-  <Button variant="solid" @click="handleClick">
-    Click me
-  </Button>
+  <Button variant="solid" @click="handleClick"> Click me </Button>
 </template>
 
 <script setup>
@@ -147,10 +154,8 @@ import { ButtonComponent } from '@bootstrap-ai/adapters/angular';
 @Component({
   selector: 'app-root',
   template: `
-    <fk-button variant="solid" (click)="handleClick()">
-      Click me
-    </fk-button>
-  `
+    <fk-button variant="solid" (click)="handleClick()"> Click me </fk-button>
+  `,
 })
 export class AppComponent {
   handleClick() {

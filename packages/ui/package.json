@@ -1,0 +1,79 @@
+{
+  "name": "@bootstrap-ai/ui",
+  "version": "0.1.0",
+  "description": "A lightweight, accessible, design-token–driven UI component library using Web Components (Lit)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./core": {
+      "import": "./dist/core/index.js",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./themes": {
+      "import": "./dist/themes/index.js",
+      "types": "./dist/themes/index.d.ts"
+    },
+    "./icons": {
+      "import": "./dist/icons/index.js",
+      "types": "./dist/icons/index.d.ts"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./themes/light.css": "./dist/themes/light.css",
+    "./themes/dark.css": "./dist/themes/dark.css",
+    "./themes/high-contrast.css": "./dist/themes/high-contrast.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:packages && npm run build:bundle",
+    "build:packages": "npm run build --workspace=@bootstrap-ai/core && npm run build --workspace=@bootstrap-ai/components && npm run build --workspace=@bootstrap-ai/themes && npm run build --workspace=@bootstrap-ai/icons",
+    "build:bundle": "node scripts/bundle.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lit": "^3.1.0"
+  },
+  "peerDependencies": {
+    "lit": "^3.0.0"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "design-system",
+    "ui-library",
+    "accessibility",
+    "design-tokens",
+    "components",
+    "css",
+    "typescript"
+  ],
+  "author": "Your Organization",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/bootstrap-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/bootstrap-ai/issues"
+  },
+  "homepage": "https://github.com/your-org/bootstrap-ai#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
